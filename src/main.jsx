@@ -11,8 +11,11 @@ import ErrorPage from "./pages/ErrorPage";
 const router = createBrowserRouter([
   { path: "*", element: <ErrorPage /> },
   { path: "/", element: <HomePage /> },
-  { path: "/profiles", element: <ProfilesPage /> },
-  { path: "/profiles/:profileId", element: <ProfilePage /> },
+  {
+    path: "/profiles",
+    element: <ProfilesPage />,
+    children: [{ path: ":profileId", element: <ProfilePage /> }],
+  },
   { path: "/products", element: <ProductsPage /> },
 ]);
 
