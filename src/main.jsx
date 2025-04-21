@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import HomePage from "./pages/HomePage";
 import ProfilesPage from "./pages/ProfilesPage";
+import ProfilePage from "./pages/ProfilePage";
 import ProductsPage from "./pages/ProductsPage";
 import ErrorPage from "./pages/ErrorPage";
 
@@ -11,6 +12,7 @@ const router = createBrowserRouter([
   { path: "*", element: <ErrorPage /> },
   { path: "/", element: <HomePage /> },
   { path: "/profiles", element: <ProfilesPage /> },
+  { path: "/profiles/:profileId", element: <ProfilePage /> },
   { path: "/products", element: <ProductsPage /> },
 ]);
 
